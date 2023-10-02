@@ -1,0 +1,69 @@
+---
+title: Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ
+author: Н.О. Стрелков, В.В. Крутских
+date: "`r Sys.Date()`"
+papersize: a4
+geometry: 'left=2cm, right=1cm, top=2cm, bottom=2cm, twoside=false'
+documentclass: book
+toc-title: "Содержание"
+lang: "ru"
+site: bookdown::bookdown_site
+output:
+  bookdown::pdf_book:
+    dev: tikz
+    keep_tex: yes
+    fig_caption: yes
+    number_sections: yes
+    latex_engine: xelatex
+    toc_depth: 5
+  bookdown::gitbook:
+    css: style.css
+    config:
+      toc:
+        before: |
+          <li><a href="./">Пример книги</a></li>
+        after: |
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+      edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+      download: ["pdf", "epub"]
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    theme: default
+    toc_depth: 5
+  bookdown::epub_book: default
+  bookdown::word_document2:
+    reference_docx: styles-reference.docx
+    pandoc_args: --lua-filter=filter.lua
+    toc: true
+    toc_depth: 5
+  bookdown::odt_document2:
+    reference_odt: styles-reference.odt
+    pandoc_args:  [--toc, --toc-depth=5, --lua-filter=filter.lua]
+    toc: true
+    toc_depth: 5
+indent: true
+bibliography: bibliography.bib
+link-citations: yes
+csl: gost-r-7-0-5-2008-numeric.csl
+include-before:
+- \stepcounter{page} # инкримент номера страницы, поскольку титульный лист это страница 1
+  
+header-includes:
+# \usepackage[T2A]{fontenc}            % внутренняя кодировка  TeX
+# \usepackage[utf8x]{inputenc}         % кодовая страница документа
+# \usepackage[english]{babel} % локализация и переносы
+# \usepackage[russian,english]{babel}
+# \usepackage{fontspec}
+- \setmainfont{Georgia}
+# \setsansfont{Sans Serif}
+- \setmonofont{Courier New}
+- \usepackage[fontsize=14pt]{scrextend}
+- \usepackage{indentfirst}
+- \setlength\parindent{12.7mm}
+- \pagestyle{plain} # номер страницы внизу по центру
+---
+
+# Аннотация {-#index}
+
+В настоящей работе рассматривается использование языка разметки Markdown для написания отчетов и дипломных работ. Используется расширение языка RMarkdown с дополнением bookdown. Демонстрируется применимость bookdown для оформления научных работ. Этот документ может быть использован как шаблон для подготовки текста работы.

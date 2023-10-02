@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ru" xml:lang="ru">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Теоретические основы использования Markdown | Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ</title>
+  <meta name="description" content="1 Теоретические основы использования Markdown | Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Теоретические основы использования Markdown | Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Теоретические основы использования Markdown | Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ" />
+  
+  
+  
+
+<meta name="author" content="Н.О. Стрелков, В.В. Крутских" />
+
+
+<meta name="date" content="2023-10-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="chapter2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Пример книги</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Аннотация</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Введение</a></li>
+<li class="chapter" data-level="1" data-path="chapter1.html"><a href="chapter1.html"><i class="fa fa-check"></i><b>1</b> Теоретические основы использования Markdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="chapter1.html"><a href="chapter1.html#markdown-hist"><i class="fa fa-check"></i><b>1.1</b> Язык разметки Markdown</a></li>
+<li class="chapter" data-level="1.2" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax"><i class="fa fa-check"></i><b>1.2</b> Синтаксис Markdown</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-head"><i class="fa fa-check"></i><b>1.2.1</b> Заголовки</a></li>
+<li class="chapter" data-level="1.2.2" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-style"><i class="fa fa-check"></i><b>1.2.2</b> Эффекты шрифта</a></li>
+<li class="chapter" data-level="1.2.3" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-lists"><i class="fa fa-check"></i><b>1.2.3</b> Списки</a></li>
+<li class="chapter" data-level="1.2.4" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-links"><i class="fa fa-check"></i><b>1.2.4</b> Ссылки и сноски</a></li>
+<li class="chapter" data-level="1.2.5" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-media"><i class="fa fa-check"></i><b>1.2.5</b> Изображения</a></li>
+<li class="chapter" data-level="1.2.6" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-tables"><i class="fa fa-check"></i><b>1.2.6</b> Таблицы</a></li>
+<li class="chapter" data-level="1.2.7" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-math"><i class="fa fa-check"></i><b>1.2.7</b> Формулы</a></li>
+<li class="chapter" data-level="1.2.8" data-path="chapter1.html"><a href="chapter1.html#markdown-syntax-bib"><i class="fa fa-check"></i><b>1.2.8</b> Список литературы и библиографические ссылки</a></li>
+<li class="chapter" data-level="1.2.9" data-path="chapter1.html"><a href="chapter1.html#markdown-listings"><i class="fa fa-check"></i><b>1.2.9</b> Листинги исходного кода</a></li>
+<li class="chapter" data-level="1.2.10" data-path="chapter1.html"><a href="chapter1.html#markdown-toc"><i class="fa fa-check"></i><b>1.2.10</b> Оглавление</a></li>
+<li class="chapter" data-level="1.2.11" data-path="chapter1.html"><a href="chapter1.html#markdown-rmarkdown"><i class="fa fa-check"></i><b>1.2.11</b> Вычисления RMarkdown</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="chapter1.html"><a href="chapter1.html#software"><i class="fa fa-check"></i><b>1.3</b> Необходимое программное обеспечение</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="chapter1.html"><a href="chapter1.html#software-r"><i class="fa fa-check"></i><b>1.3.1</b> R, RStudio, TeXLive</a></li>
+<li class="chapter" data-level="1.3.2" data-path="chapter1.html"><a href="chapter1.html#software-retext"><i class="fa fa-check"></i><b>1.3.2</b> Текстовый редактор ReText</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="chapter1.html"><a href="chapter1.html#authoring-odt"><i class="fa fa-check"></i><b>1.4</b> Процесс подготовки odt-документов</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="chapter1.html"><a href="chapter1.html#authoring-odt-template"><i class="fa fa-check"></i><b>1.4.1</b> Использование odt-шаблона</a></li>
+<li class="chapter" data-level="1.4.2" data-path="chapter1.html"><a href="chapter1.html#authoring-odt-final"><i class="fa fa-check"></i><b>1.4.2</b> Финальная подготовка рукописи</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="chapter1.html"><a href="chapter1.html#authoring-docx"><i class="fa fa-check"></i><b>1.5</b> Процесс подготовки docx-документов</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="chapter1.html"><a href="chapter1.html#authoring-docx-template"><i class="fa fa-check"></i><b>1.5.1</b> Использование docx-шаблона</a></li>
+<li class="chapter" data-level="1.5.2" data-path="chapter1.html"><a href="chapter1.html#authoring-docx-math"><i class="fa fa-check"></i><b>1.5.2</b> Преобразование формул</a></li>
+<li class="chapter" data-level="1.5.3" data-path="chapter1.html"><a href="chapter1.html#authoring-docx-final"><i class="fa fa-check"></i><b>1.5.3</b> Финальная подготовка рукописи</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> Вторая глава</a></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> Третья глава</a></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Заключение</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Приложения</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>Список использованных источников</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Использование Markdown, RMarkdown и bookdown для подготовки научных отчетов и дипломных работ</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+
+<div id="chapter1" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Теоретические основы использования Markdown<a href="chapter1.html#chapter1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="markdown-hist" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Язык разметки Markdown<a href="chapter1.html#markdown-hist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Язык разметки Markdown создал Джон Грубер совместно с Аароном Шварцем в 2004 году. Ниже преставлена полная цитата, отражающая цель создания языка:</p>
+<blockquote>
+<p>John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax, with the goal of enabling people “to write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid XHTML (or HTML)”.</p>
+</blockquote>
+<p>Официальный логотип языка Markdown представлен на рисунке <img src="figures/Markdown-mark.png" /> .</p>
+<p>В настоящее время язык широко используется следующими сайтами и организациями:</p>
+<ul>
+<li><a href="http://github.com">GitHub.com</a> - GitHub Flavored Markdown (GFM) - сайт с публичными и частными Git-репозиториями;</li>
+<li><a href="https://bitbucket.org">BitBucket.org</a> - сайт с публичными и частными Git- и Mercurial- репозиториями;</li>
+<li><a href="https://about.gitlab.com/">GitLab.com</a> - система упраления проектами с поддержкой Git-репозиториев;</li>
+<li><a href="https://www.atlassian.com/software/jira">Atlassian JIRA</a> - система управления задачами и проектами;</li>
+<li><a href="https://wordpress.com/">WordPress.com</a> - веб-платформа для создания сайтов и блогов;</li>
+<li><a href="https://stackoverflow.com/">StackOverflow.com</a> - сеть сайтов вопросов и ответов по множеству тематик.</li>
+</ul>
+<p>Язык Markdown обладает следующими преимуществами:</p>
+<ul>
+<li>текстовый удобный для редактирования и чтения формат;</li>
+<li>легко просматривать отличия между версиями и искать текст файловым менеджером и даже командой <code>grep</code>;</li>
+<li>возможна совместная работа в системе контроля версий (Git, Mercurial и пр.).</li>
+</ul>
+<p>Для редактирования и просмотра Markdown документов может использоваться текстовый редактор с поддержкой Markdown:</p>
+<ul>
+<li>ReText (Windows, Linux - <a href="https://github.com/retext-project/retext">https://github.com/retext-project/retext</a>);</li>
+<li>GhostWriter (Windows, Linux - <a href="https://wereturtle.github.io/ghostwriter">https://wereturtle.github.io/ghostwriter</a>);</li>
+<li>Typora (Windows, Linux, macOS - <a href="https://typora.io/">https://typora.io/</a>);</li>
+<li>Remarkable (Windows, Linux - <a href="http://remarkableapp.github.io/">http://remarkableapp.github.io/</a>);</li>
+<li>Geany (Windows, Linux, macOS - <a href="https://geany.org/">https://geany.org/</a>);</li>
+<li>Atom text editor (Windows, Linux, macOS - <a href="https://atom.io/">https://atom.io/</a>);</li>
+<li>Dilinger (online - <a href="https://dillinger.io">https://dillinger.io</a>).</li>
+</ul>
+<p>Практически все редакторы имеют одинаковые стандартные возможности: форматирование, отображение Markdown и экспорт в HTML, PDF, ODT (OpenDocument) и др.</p>
+<p>Настоящий документ написан с использованием обобщенного синтаксиса Markdown, поэтому изучение синтаксиса языка можно выполнять путем просмотра и/или редактирования отдельных элементов текста документа.</p>
+</div>
+<div id="markdown-syntax" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Синтаксис Markdown<a href="chapter1.html#markdown-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Далее рассматривается обобщенный Markdown синтаксис, включающий в себя:</p>
+<ul>
+<li>исходный <strong>Makdown</strong> синтаксис (см. <a href="http://daringfireball.net/projects/markdown">http://daringfireball.net/projects/markdown</a>);</li>
+<li>расширение <strong>RMarkdown</strong> (см. <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/rmarkdown-2.0.pdf">RMarkdown Cheat Sheet</a> и <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">RMarkdown Reference</a>);</li>
+<li><strong>bookdown</strong> для написания книг (см. <a href="https://bookdown.org/yihui/bookdown/">книгу Yihui Xie “bookdown: Authoring Books and Technical Documents with R Markdown”</a>).</li>
+</ul>
+<p>Исходный синтаксис <strong>Markdown</strong> обеспечивает форматирование документа.</p>
+<p><strong>RMarkdown</strong> позволяет выполнять расчеты на языке программирования R <img src="figures/Rlogo.png" /> (см. <a href="https://www.r-project.org/">https://www.r-project.org/</a>) и оформлять полученные результаты в одном документе.</p>
+<p><strong>Bookdown</strong> – это расширение RMarkdown для создания книг, его создал Yihui Xie в 2016 году. Официальная книга постоянно обновляется и расположена по адресу <a href="https://bookdown.org/yihui/bookdown/">https://bookdown.org/yihui/bookdown/</a>.</p>
+<p>Назначение bookdown: автоматизированное получение из одного Rmd-документа файлов любых форматов (PDF, epub, HTML, docx, Mobi).</p>
+<p>Дополнительная функциональность bookdown:</p>
+<ul>
+<li>Автоматическое создание оглавления.</li>
+<li>Автоматическая одноуровневая или двухуровневая нумерация рисунков, таблиц, формул, теорем, доказательств и т.п.</li>
+<li>Построение списка литературы в тексте учетом выбранного стиля оформления (например, в порядке упоминания источников).</li>
+<li>Использование вычислительных возможностей языка R - возможность расчета графиков и вставки их в текст, включение файлов в текст.</li>
+<li>Возможность выполнения программ скриптов в операционной системе и их включения в текст.</li>
+<li>Автоматическое создание алфавитного указателя в LaTeX и PDF.</li>
+</ul>
+<p><strong>Программное обеспечение и особенности</strong>. Для работы с RMarkdown требуется установить среду разработки RStudio <img src="figures/rstudio.png" /> и TeXLive для экспорта в LaTeX и PDF. Эти вопросы рассмотрены подробнее в разделе <a href="chapter1.html#software">1.3</a>. При этом процесс получения документов имеет вид:</p>
+<p><img src="figures/Rmd.png" /></p>
+<p>Выходными форматами являются PDF, ODT, RTF, HTML, docx. Подробности этого процесса описаны в книгах Yihui Xie.</p>
+<p>Перейдем к рассмотрению обобщенного синтаксиса Markdown.</p>
+<div id="markdown-syntax-head" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Заголовки<a href="chapter1.html#markdown-syntax-head" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Заголовки в Markdown обозначаются с помощью символа “решетка” (#). Заголовок 1-го уровня имеет один символ #, заголовок 2-го уровня - “##” и т.п.</p>
+<p>Заголовки могут иметь идентификатор, он указывается в фигурных скобках, см. например заголовок этого пункта. Все идентификаторы не должны содержать подчеркиваний (“_“), но могут содержать знаки минус (”-“).</p>
+<p>Ссылка на нумерованный раздел с известным идентификатором будет иметь вид: см. раздел <a href="chapter1.html#markdown-syntax-head">1.2.1</a>.</p>
+<p>Так же ссылка может быть задана с произвольным текстом: см. <a href="intro.html#intro">введение</a>. Этот вариант предпочтителен для экспорта в DOCX.</p>
+</div>
+<div id="markdown-syntax-style" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Эффекты шрифта<a href="chapter1.html#markdown-syntax-style" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Абзацы текста отделяется друг от друга переводами строки до и после.</p>
+<p>Перевод текста на новую строку выполняется с помощью добавления двух пробелов<br />
+в конце строки (здесь три слова “в конце строки” оказались вначале новой строки).</p>
+<p>Полужирный шрифт может быть получен одним из способов: <strong>полужирный</strong> или <strong>полужирный</strong>.</p>
+<p>Курсивный шрифт может быть получен одним из способов: <em>курсив</em> или <em>курсив</em>.</p>
+<p>Полужирный курсив может быть получен одним из способов: <strong><em>полужирный курсив</em></strong> или <strong><em>полужирный курсив</em></strong>.</p>
+<p>После этого абзаца следует горизонтальная линия, заданная в виде трех последовательных знаков минус (“-”):</p>
+<hr />
+<p>Моноширинный шрифт (обычно используется для отображения исходного кода) может быть задан с помощью двух символов машинописного обратного апострофа - <code>код в тексте</code>.</p>
+<p>Многострочный исходный код отделяется от основного текста четырьмя пробелами:</p>
+<pre><code>int main() {
+return 0;
+}</code></pre>
+<p>Цитаты или примечания оформляются с помощью знака больше (“&gt;”):</p>
+<blockquote>
+<p>Это цитата или примечание.</p>
+</blockquote>
+<p>Поскольку настоящий документ компилируется в RStudio, поэтому здесь поддерживаются дополнительные возможности RMarkdown:</p>
+<ul>
+<li>верхний индекс, например для возведения в квадрат - x<sup>2</sup> ;</li>
+<li>нижний индекс для индексации элементов - y<sub>3</sub> ;</li>
+<li>зачеркнутых текст с помощью двойного знака тильды (“~”) : <del>зачеркнутый текст</del> ;</li>
+<li>знак тире (“–”) в виде двух последовательных знаков минус : понятие – опеределение ;</li>
+<li>знак длинного тире (“—”) в виде трех последовательных знаков минус : понятие — понятие .</li>
+</ul>
+</div>
+<div id="markdown-syntax-lists" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Списки<a href="chapter1.html#markdown-syntax-lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ниже представлен нумерованный список из трех пунктов (нумерация выполняется автоматически)</p>
+<ol style="list-style-type: decimal">
+<li>Первый элемент списка;</li>
+<li>Второй элемент списка;</li>
+<li>Третий элемент списка.</li>
+</ol>
+<blockquote>
+<p>Примечание: автоматическая нумерация вложенных списков не поддерживается.</p>
+</blockquote>
+<p>Ниже представлен ненумерованный список из трех элементов</p>
+<ul>
+<li>Верхний элемент списка;</li>
+<li>Средний элемент списка;</li>
+<li>Нижний элемент списка.</li>
+</ul>
+<p>Списки могут быть вложенными, при этом уровни отделяются двумя пробелами:</p>
+<ul>
+<li>1-й элемент уровня 1</li>
+<li>2-й элемент уровня 1
+<ul>
+<li>1-й элемент уровня 2
+<ul>
+<li>1-й элемент уровня 3</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Элементы списка могут содержать форматирование (полужирный шрифт, курсив, моноширинный шрифт и т.п.), могут содержать вложенные элементы. При этом код должен быть отделен необходимым дополнительным количеством пробелов:</p>
+<ul>
+<li><p>строка 1</p></li>
+<li><p>строка 2 с блоком кода</p>
+<pre><code>int main(){
+  return 0;
+}</code></pre>
+<p>Далее следует цитата</p>
+<blockquote>
+<p>Цитата</p>
+</blockquote>
+<p>и нумерованный список</p>
+<ol style="list-style-type: decimal">
+<li>один</li>
+<li>два</li>
+<li>три</li>
+</ol></li>
+<li><p>строка 3</p></li>
+</ul>
+</div>
+<div id="markdown-syntax-links" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Ссылки и сноски<a href="chapter1.html#markdown-syntax-links" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ниже представлена <strong>ссылка</strong> на сайт университета:</p>
+<p><a href="http://www.mpei.ru">Сайт НИУ “МЭИ”</a></p>
+<p>В квадратных скобках указан текст ссылки, который будет отображаться на экране, а в круглых скобках указывается полный URL ресурса.</p>
+<p>В этом абзаце имеется <strong>сноска</strong> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> с расшифровкой в конце страницы.</p>
+</div>
+<div id="markdown-syntax-media" class="section level3 hasAnchor" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Изображения<a href="chapter1.html#markdown-syntax-media" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Простой Markdown не позволяет выполнять автоматическую нумерацию рисунков, но позволяет вставить <strong>рисунок</strong> c подписью. Далее следует рисунок с названием <em>Markdown</em>, сохраненный в файле <strong>figures/Markdown-mark.png</strong>:</p>
+<div class="float">
+<img src="figures/Markdown-mark.png" alt="Markdown" />
+<div class="figcaption">Markdown</div>
+</div>
+<p>Рисунок может не иметь названия, тогда код упрощается:</p>
+<p><img src="figures/Markdown-mark.png" /></p>
+<p>Автоматическая нумерация рисунков выполняется с помощью метки <code>fig</code>, поэтому рисунок с автоматической нумерацией и идентификатором <code>md-logo</code> может быть вставлен следующим образом:</p>
+<div class="float">
+<img src="figures/Markdown-mark.png" alt=" Логотип Markdown" />
+<div class="figcaption"> Логотип Markdown</div>
+</div>
+<p>Ссылка на такой рисунок будет иметь вид: на рисунке <a href="#fig:md-logo">1.1</a> представлен логотип языка разметки Markdown.</p>
+<p>Текст, обозначающий иллюстрацию (например, “Рис.” или “Рисунок”) задается в файле <code>_bookdown.yml</code> в YAML-секции <code>language</code>:</p>
+<pre><code>language:
+  label:
+    fig: &#39;Рисунок &#39;</code></pre>
+<p>Для каждого рисунка могут быть принудительно заданы его размеры с помощью соответствующих атрибутов <code>width</code> или <code>height</code> внутри фигурных скобок после описания изображения. Поддерживаются следующие единицы измерения <code>px</code>, <code>cm</code>, <code>mm</code>, <code>in</code> / <code>inch</code> и <code>%</code>. Для сохранения пропорций рекомендуется задавать один размер (ширину или высоту).</p>
+<p>Пример задания ширины изображения:</p>
+<div class="float">
+<img src="figures/Markdown-mark.png" style="width:1cm" alt=" Логотип Markdown шириной 1 см" />
+<div class="figcaption"> Логотип Markdown шириной 1 см</div>
+</div>
+<p>Пример задания высоты изображения:</p>
+<div class="float">
+<img src="figures/Markdown-mark.png" style="height:2cm" alt=" Логотип Markdown высотой 2 см" />
+<div class="figcaption"> Логотип Markdown высотой 2 см</div>
+</div>
+<p>Пример задания ширины и высоты изображения:</p>
+<div class="float">
+<img src="figures/Markdown-mark.png" style="height:39mm" alt=" Логотип Markdown шириной 64 мм и высотой 39 мм" />
+<div class="figcaption"> Логотип Markdown шириной 64 мм и высотой 39 мм</div>
+</div>
+</div>
+<div id="markdown-syntax-tables" class="section level3 hasAnchor" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> Таблицы<a href="chapter1.html#markdown-syntax-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Таблицы могут оформляться одним из способов - первый:</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Столбец 1</strong></th>
+<th><strong>Столбец 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>строка 1, столбец 1</td>
+<td>строка 1, столбец 2</td>
+</tr>
+<tr class="even">
+<td>строка 2, столбец 1</td>
+<td>строка 2, столбец 2</td>
+</tr>
+</tbody>
+</table>
+<p>второй:</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Столбец 1</strong></th>
+<th><strong>Столбец 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>строка 1, столбец 1</td>
+<td>строка 1, столбец 2</td>
+</tr>
+<tr class="even">
+<td>строка 2, столбец 1</td>
+<td>строка 2, столбец 2</td>
+</tr>
+</tbody>
+</table>
+<p>Выравнивание столбцов выполняется с помощью знака двоеточия (“:”) во второй строке:</p>
+<table>
+<colgroup>
+<col width="32%" />
+<col width="35%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Столбец 1 (влево)</strong></th>
+<th align="center"><strong>Столбец 2 (по центру)</strong></th>
+<th align="right"><strong>Столбец 3 (вправо)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">строка 1, столбец 1</td>
+<td align="center">строка 1, столбец 2</td>
+<td align="right">строка 1, столбец 3</td>
+</tr>
+<tr class="even">
+<td align="left">строка 2, столбец 1</td>
+<td align="center">строка 2, столбец 2</td>
+<td align="right">строка 2, столбец 3</td>
+</tr>
+</tbody>
+</table>
+<p>Автоматическая нумерация таблиц выполняется с помощью метки <code>tab</code> аналогично рисункам.</p>
+<table>
+<caption><span id="tab:uno-tech">Таблица 1.1: </span> Технические характеристики платы Arduino Uno R3</caption>
+<thead>
+<tr class="header">
+<th><strong>Параметр</strong></th>
+<th><strong>Значение</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Микроконтроллер</td>
+<td>ATmega328P</td>
+</tr>
+<tr class="even">
+<td>Напряжение питания</td>
+<td>5 В</td>
+</tr>
+<tr class="odd">
+<td>Внешнее напряжение питания (рекомендуемое)</td>
+<td>7–12 В</td>
+</tr>
+<tr class="even">
+<td>Внешнее напряжение питания (предельное)</td>
+<td>6–20 В</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Примечание: английская надпись “Table:” обязательно должна присутствовать в начале строки для правильной нумерации таблицы.</p>
+</blockquote>
+<p>Ссылка на таблицу выполняется аналогично рисунку: в таблице <a href="chapter1.html#tab:uno-tech">1.1</a> представлены технические характеристики платформы Arduino Uno.</p>
+<p>Текст, обозначающий таблицу (например, “Табл.” или “Таблица”) задается в файле <code>_bookdown.yml</code> в YAML-секции <code>language</code>:</p>
+<pre><code>language:
+  label:
+    tab: &#39;Таблица &#39;</code></pre>
+<p>Текст в таблицах может иметь форматирование.</p>
+<p>В некоторых случаях требуется поместить несколько строк текста в одну ячейку таблицы. При этом используется другой способ задания таблиц, который показан ниже при оформлении таблицы <a href="chapter1.html#tab:soft-math-tab">1.2</a>.</p>
+<table style="width:99%;">
+<caption><span id="tab:soft-math-tab">Таблица 1.2: </span> Программы и языки программирования для математических расчетов</caption>
+<colgroup>
+<col width="9%" />
+<col width="33%" />
+<col width="56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="left"><strong>Визуальные</strong></th>
+<th align="left"><strong>Текстовые</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>Платные</strong></td>
+<td align="left"><ul>
+<li><a href="http://www.ptc.com/product/mathcad">PTC MathCAD</a></li>
+<li><a href="http://www.wolfram.com/mathematica">Wolfram Mathematica</a></li>
+<li><a href="http://www.maplesoft.com">Waterloo Maple</a></li>
+</ul></td>
+<td align="left"><ul>
+<li><a href="http://www.mathworks.com">MathWorks MATLAB</a></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Бесплатные</strong></td>
+<td align="left"><ul>
+<li><a href="http://smath.info">SMath Studio</a></li>
+<li><a href="http://www.wolframalpha.com">WolframAlpha</a></li>
+<li><a href="http://andrejv.github.io/wxmaxima">wxMaxima</a></li>
+</ul></td>
+<td align="left"><ul>
+<li><a href="http://scilab.org/">Scilab</a></li>
+<li><a href="https://www.gnu.org/software/octave/">GNU Octave</a></li>
+<li><a href="http://www.sagemath.org/">Sage</a></li>
+<li><a href="http://freemat.sourceforge.net/">FreeMAT</a></li>
+<li><a href="http://axiom-developer.org">Axiom</a></li>
+<li><a href="https://reduce-algebra.sourceforge.io">Reduce</a></li>
+<li><a href="http://euler.rene-grothmann.de/index.html">Euler Math Toolbox</a></li>
+<li><a href="http://julialang.org/">Julia</a></li>
+<li><a href="https://code.google.com/p/spyderlib/">Spyder - The Scientific PYthon Development EnviRonment</a></li>
+<li><a href="https://cran.rstudio.com/">R</a>, <a href="https://rstudio.com/products/rstudio/">RStudio</a></li>
+<li>написание программ на языках <a href="http://en.wikipedia.org/wiki/Fortran">Fortran</a>,
+<a href="http://en.wikipedia.org/wiki/C_(programming_language)">C</a>/<a href="http://en.wikipedia.org/wiki/C++">C++</a> с
+библиотеками <a href="http://www.netlib.org/lapack/">LAPACK</a>, <a href="http://www.netlib.org/blas/">BLAS</a>,
+<a href="http://math-atlas.sourceforge.net/">ATLAS</a>,
+<a href="http://www.netlib.org/minpack/">MINPACK</a>, <a href="http://netlib.org/">NETLIB.org</a>,
+<a href="http://arma.sourceforge.net/">Armadillo</a></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Примечание: еще большее количество типов таблиц можно найти внутри документа <a href="https://gitlab.iaaras.ru/iaaras/gostdown/blob/master/demo-main.md">проекта GostDown</a> или в <a href="https://pandoc.org/MANUAL.html#tables">соответствующем разделе документации по Pandoc</a>.</p>
+</blockquote>
+</div>
+<div id="markdown-syntax-math" class="section level3 hasAnchor" number="1.2.7">
+<h3><span class="header-section-number">1.2.7</span> Формулы<a href="chapter1.html#markdown-syntax-math" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Формулы без нумерации и расположенные непосредственно могут быть набраны в одиночных знаках доллара, например, <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
+<p>Формулы без нумерации и расположенные в отдельной строке могут быть набраны в двойных знаках доллара в отдельной строке, как показано ниже</p>
+<p><span class="math display">\[ E = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}} \]</span></p>
+<p>или</p>
+<p><span class="math display">\[
+E = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+\]</span></p>
+<p>Формулы с автоматической нумерацией отличаются наличием идентификатора в круглых скобках <code>(\#eq:name)</code>:</p>
+<p><span class="math display" id="eq:binom">\[\begin{equation}
+f\left(k\right) =\binom{n}{k} p^k\left(1-p\right)^{n k}
+\tag{1.1}
+\end{equation}\]</span></p>
+<p>При необходимости формула и ее номер могут быть правильно выравнены в MS Word с помощью применения пользовательского стиля <em>DisplayEquation</em>:</p>
+<div custom-style="DisplayEquation">
+<p><span class="math display" id="eq:am">\[\begin{equation}
+S_{AM}\left( t \right) = U\left( 1+M\cdot F\left( t \right) \right)\cos \left( \omega_c\cdot t \right)
+\tag{1.2}
+\end{equation}\]</span></p>
+</div>
+<p>Ссылка на формулу выполняется с помощью поля <code>\@ref(eq:name)</code>: ссылаемся на первое выражение - <a href="chapter1.html#eq:binom">(1.1)</a> и второе выражение <a href="chapter1.html#eq:am">(1.2)</a>.</p>
+<p>Набор формул возможен в MathType 6 (желательно 6.9 и выше) с последующим экспортом в LaTeX с помощью меню <em>Preferences</em> - <em>Cut and Copy Preferences</em> : в списке <em>MathML or TeX</em> нужно выбрать пункт <em>Plain TeX</em>.</p>
+<p>Для быстроты копирования можно снять обе галочки: <em>Include translator name in translation</em> и <em>Include MathType data in translation</em>.<br />
+Но иногда при экспорте в docx возникают ошибки pandoc вида <code>[pandoc warning] Cannot convert the following TeX math, skipping:</code>, поэтому лучше использовать LyX для набора или исправления формул.</p>
+<div id="markdown-syntax-math-matrix" class="section level4 hasAnchor" number="1.2.7.1">
+<h4><span class="header-section-number">1.2.7.1</span> Формулы с матрицами<a href="chapter1.html#markdown-syntax-math-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Матрицы:</p>
+<p><span class="math display">\[AA = \begin{pmatrix} \alpha_{22} &amp; \beta\\
+\Xi^2 &amp; 1
+\end{pmatrix}\]</span></p>
+<p><span class="math display">\[\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix},
+\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix},
+\begin{vmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{vmatrix},
+\begin{Vmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{Vmatrix}\]</span></p>
+<p>Матрица с точками:</p>
+<p><span class="math display">\[A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}\]</span></p>
+<p>Система уравнений со скобкой:</p>
+<p><span class="math display">\[\begin{equation*}
+\begin{cases}
+   2 |x|(2 - x) = a, \\
+   x &lt; 2, \\
+   x \ne 0.
+\end{cases}
+\end{equation*}\]</span></p>
+</div>
+<div id="markdown-syntax-math-syms" class="section level4 hasAnchor" number="1.2.7.2">
+<h4><span class="header-section-number">1.2.7.2</span> Формулы с интегралами и дифференциалами<a href="chapter1.html#markdown-syntax-math-syms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>В этом разделе собраны символы, наиболее часто используемые в дифференциальном и интегральном исчислении:</p>
+<ul>
+<li><code>lim</code> предел;</li>
+<li><code>prod</code> произведение;</li>
+<li><code>sum</code> сумма;</li>
+<li><code>frac</code> черта деления;</li>
+<li><code>int</code> интеграл;</li>
+<li><code>iint</code> двойной интеграл;</li>
+<li><code>iiint</code> тройной интеграл;</li>
+<li><code>oint</code> круговой интеграл;</li>
+<li><code>partial</code> частная производная;</li>
+<li><code>infty</code> бесконечность;</li>
+<li><code>to</code> стрелка (в пределах);</li>
+<li><code>pm</code> плюс-минус</li>
+</ul>
+<p>Дроби, в которых числитель расположен над знаменателем, набираются с помощью команды <span class="math inline">\(\frac{числитель}{знаменатель}\)</span>.</p>
+<p>Производная в виде дроби:</p>
+<p><span class="math display">\[\begin{equation}
+F(x) = 2+\frac{d}{dx}(U(x))
+\end{equation}\]</span></p>
+<p>Частная производная:</p>
+<p><span class="math display">\[\begin{equation}
+dz = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy
+\end{equation}\]</span></p>
+<p>Интегралы:</p>
+<p><span class="math display">\[\begin{equation}
+\int_{0}^{3} f(x) dx
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\iint_{x^2 + y^2 = 1} f(x, y) dx dy
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\iiint_{x^2 + y^2 + z^2 = 1} f(x, y, z) dx dy dz
+\end{equation}\]</span></p>
+<p>Пределы:</p>
+<p><span class="math display">\[\begin{equation}
+\lim\limits_{x \to \infty} \left(1 + \frac{1}{n} \right)^n = e
+\end{equation}\]</span></p>
+<p>Произведение:</p>
+<p><span class="math display">\[\begin{equation}
+F(x)= \prod_{n=1}^{\infty}\left(1 + \frac{x}{n!} \right)
+\end{equation}\]</span></p>
+<p>Функции:</p>
+<p><span class="math display">\[\begin{equation}
+    \lim_{n \to \infty}
+    \sum_{k=1}^n \frac{1}{k^2}
+    = \frac{\pi^2}{6}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\arg, \cos, \cosh, \cot, \coth, \csc,\det, \dim, \exp, \gcd, \hom, \inf, \ker, \lg, \ln
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\log, \max, \min, \sec, \sin, \sinh, \sup,\tan, \tanh, \arccos, \arcsin, \arctan
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \begin{matrix}
+    \hat{\Phi}[k,l] &amp; =
+    &amp; \left\{
+    \begin{matrix}
+    0 &amp; \mbox{if } k,l = 0 \\
+    S_x[k,l]\cdot H_x[k,l] + S_y[k,l]\cdot H_y[k,l] &amp; \mbox{otherwise }
+    \end{matrix} \right.
+    \end{matrix}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+S_{\text{вых}}(x_2, y_2) = A_0 \underbrace{\iint dx_0 dy_0 \; g(x_0, y_0) \cdot h(x_2-x_0, y_2 -y_0)}_{\text{по определению это есть свёртка }} = A_0 g \otimes h
+\end{equation}\]</span></p>
+</div>
+<div id="markdown-syntax-math-examples" class="section level4 hasAnchor" number="1.2.7.3">
+<h4><span class="header-section-number">1.2.7.3</span> Примеры формул<a href="chapter1.html#markdown-syntax-math-examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Амплитудная модуляция:</p>
+<p><span class="math display">\[\begin{equation}
+S_{AM}(t)=U(1+M \cdot F(t)) \cos{(\omega t+\phi)}
+\end{equation}\]</span></p>
+<p>Амплитудная однотональная модуляция:</p>
+<p><span class="math display">\[\begin{equation}
+S_{AM}(t)=U(1+M \cdot \cos{(\Omega t)}) \cos{(\omega_{c} t+\phi)}
+\end{equation}\]</span></p>
+<p>Амплитудная однотональная модуляция, разложение:</p>
+<p><span class="math display">\[\begin{eqnarray}
+S_{AM}(t)=U(1+M \cdot \cos{(\Omega t)}) \cos{( \omega_{c} t)} = \nonumber
+\\
+= U \cos{(\omega t)} +U \cdot M \cdot \cos{(\Omega t)}) \cos{(\omega_{c} t)} =\nonumber
+\\
+= U \cos{(\omega_{c} t)} +\frac{U \cdot M}{2} \cos{((\omega_{c}-\Omega) t)}) + \frac{U \cdot M}{2} \cos{((\omega_{c}+\Omega) t)})
+\end{eqnarray}\]</span></p>
+<p><span class="math display">\[\begin{eqnarray}
+S_{AM}(t)= \underbrace{U \cos{(\omega_{c} t)}}_{\text{несущая}} +\nonumber
+\\
++ \underbrace{\frac{U \cdot M}{2} \cos{((\omega_{c}-\Omega) t)})}_{\text{нижняя боковая полоса}} +\nonumber
+\\
++\underbrace{\frac{U \cdot M}{2} \cos{((\omega_{c}-\Omega) t)})}_{\text{верхняя боковая полоса}} \nonumber
+\end{eqnarray}\]</span></p>
+<p>Частотная модуляция:</p>
+<p><span class="math display">\[\begin{equation}
+S_{FM}(t)=U \cos{((\omega_{c}+D \cdot F(t)) t+\phi)}
+\end{equation}\]</span></p>
+<p>Фазовая модуляция:</p>
+<p><span class="math display">\[\begin{equation}
+S_{PM}(t)=U \cos{(\omega_{c} t+(\phi+D \cdot F(t)))}
+\end{equation}\]</span></p>
+<p>Коэффициент передачи ФНЧ:</p>
+<p><span class="math display">\[\begin{equation}
+K(\omega)= \frac {1}{1+j\omega \tau}
+\end{equation}\]</span></p>
+<p>Коэффициент передачи ФВЧ:</p>
+<p><span class="math display">\[\begin{equation}
+K(\omega)= \frac {j\omega \tau}{1+j\omega \tau}
+\end{equation}\]</span></p>
+<p>Последовательный колебательный контур:</p>
+<p><span class="math display">\[\begin{equation}
+K(\omega)= \frac{U_{C}}{E}= \frac { \frac{1}{j\omega C}}{j \omega L+ \frac{1}{j\omega C}+R}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+K(\omega)=  \frac {1}{1 -\omega^2 LC+j \omega RC}
+\end{equation}\]</span></p>
+<p>Формула с прямым русским (кириллическим) текстом:</p>
+<p><span class="math display">\[\begin{equation}
+U_\text{вых.} = U_\text{м} \cos(\omega t)
+\end{equation}\]</span></p>
+<p>Формула с курсивным русским (кириллическим) текстом:</p>
+<p><span class="math display">\[\begin{equation}
+U_\textit{вых.} = U_\textit{м} \cos(\omega t)
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="markdown-syntax-bib" class="section level3 hasAnchor" number="1.2.8">
+<h3><span class="header-section-number">1.2.8</span> Список литературы и библиографические ссылки<a href="chapter1.html#markdown-syntax-bib" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Список литературы задается в виде отдельного файла с записями в формате BibTeX (<em>.bib</em>). Пример фрагмента файла <em>bibliography.bib</em>:</p>
+<pre><code>@online{arduino,
+  title = {Arduino – Home},
+  url = {https://www.arduino.cc/},
+}
+
+@book{banzi,
+  title = {Arduino для начинающих волшебников},
+  publisher = {М.: Рид Групп},
+  author = {{Массимо Банци}},
+  year = {2012},
+}</code></pre>
+<p>Описание библиографической записи в формате BibTeX для книг может быть получено с сайта <a href="https://books.google.ru/">Google Books</a> - нужно найти книгу с помощью поиска, найти ссылку <em>About this book</em> и перейти по ней, далее на открывшейся странице с описанием книги найти в области <em>Export Citation</em> кнопку <em>BiBTeX</em> и скопировать описание книги в bib-файл.</p>
+<p>Каждый элемент bib-файла характеризуется типом (в этом примере это <code>@online</code> для веб-страницы и <code>@book</code> для книги) и идентификатором, следующим после открывающей фигурной скобки (в этом примере <code>arduino</code> и <code>banzi</code>).</p>
+<p>Ссылка в тексте дается в квадратных скобках с указанием идентификатора объекта после символа @.</p>
+<p>Пример ссылки в тексте: для изучения платформы Arduino см. веб-страницу проекта Arduino <span class="citation">[<a href="#ref-arduino">1</a>]</span> и книгу М. Банци <span class="citation">[<a href="#ref-banzi">2</a>]</span>.</p>
+<p>При необходимости можно добавить ссылку с учетом номеров страниц: см. книгу М. Банци <span class="citation">[<a href="#ref-banzi">2, с. 11</a>]</span> или <span class="citation">[<a href="#ref-banzi">2, с. 15–20</a>]</span>.</p>
+<p>Оформление списков литературы выполняется в соответствии с правилами, заданными в CSL-файле стиля ссылок в YAML-преамбуле. К этому документу подключен файл <em>gost-r-7-0-5-2008-numeric.csl</em>, соответствующий ГОСТ Р 7.0.5-2008 с цифровой нумерацией источников в порядке их упоминания в тексте.</p>
+</div>
+<div id="markdown-listings" class="section level3 hasAnchor" number="1.2.9">
+<h3><span class="header-section-number">1.2.9</span> Листинги исходного кода<a href="chapter1.html#markdown-listings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>В некоторых случаях оказывается необходимым выполнять нумерацию фрагментов исходного кода (листингов). Для этого в файле <code>_bookdown.yml</code> в секции <em>language</em> можно переобозначить индекс, предназначенный для оформления примеров:</p>
+<pre><code>language:
+  label:
+    exm: &#39;Листинг &#39;</code></pre>
+<p>В этом случае фрагмент программы может быть оформлен с использованием пользовательского стиля <em>ListingCaption</em> для docx следующим образом:</p>
+<div custom-style="ListingCaption">
+<div class="example">
+<p><span id="exm:code-blink" class="example"><strong>Листинг 1.1  </strong></span>Программа для отображения работы программы с помощью светодиода</p>
+</div>
+</div>
+<pre><code>// зададим номер контакта, к которому подключен светодиод
+int ledPin = 13;
+
+// функция setup выполняется однократно при нажатии клавиши сброса или включении платы
+void setup() {
+  // инициализация контакта, к которому подключен светодиод как выходного (OUTPUT)
+  pinMode(ledPin, OUTPUT);
+}
+
+// функция loop выполняется в бесконечном цикле
+void loop() {
+  digitalWrite(ledPin, HIGH);   // включаем светодиод (HIGH – это напряжение 5 В)
+  delay(1000);                       // пауза 1000 мс
+  digitalWrite(ledPin, LOW);    // выключаем светодиод (в этом случае LOW – это напряжение 0 В)
+  delay(1000);                       // пауза 1000 мс
+}</code></pre>
+<p>Ссылка на листинг исходного кода оформляется в виде: см. листинг <a href="chapter1.html#exm:code-blink">1.1</a>.</p>
+</div>
+<div id="markdown-toc" class="section level3 hasAnchor" number="1.2.10">
+<h3><span class="header-section-number">1.2.10</span> Оглавление<a href="chapter1.html#markdown-toc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Оглавление или содержание задается в YAML-преамбуле документа и имеет вид:</p>
+<pre><code>---
+toc-title: &quot;Оглавление&quot;
+output:
+  bookdown::word_document2:
+    toc: true
+    toc_depth: 5
+  bookdown::html_document2:
+    toc: true
+    toc_depth: 5
+---</code></pre>
+<p>здесь <code>toc-title</code> задает текст, выводимый перед оглавлением, <code>toc: true</code> включает отображение оглавления, <code>toc_depth</code> задает количество отображаемых уровней заголовков в оглавлении.</p>
+</div>
+<div id="markdown-rmarkdown" class="section level3 hasAnchor" number="1.2.11">
+<h3><span class="header-section-number">1.2.11</span> Вычисления RMarkdown<a href="chapter1.html#markdown-rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RMarkdown позволяет объединять в одном документе расчеты и оформление результатов. Ниже представлен код для создания вложенного нумерованного списка:</p>
+<ol style="list-style-type: decimal">
+<li>Пункт<br />
+1.1. Подпункт<br />
+1.2. Подпункт<br />
+</li>
+<li>Пункт</li>
+</ol>
+</div>
+</div>
+<div id="software" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Необходимое программное обеспечение<a href="chapter1.html#software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Для локальной работы необходимо установить следующие компоненты: язык программировани R, среду RStudio, и набор типографских программ TeXLive для подготовки LaTeX- и PDF-версий документа и редактор ReText для редактирования документов Markdown.</p>
+<p>Для редактирования полученного docx-файла необходим Microsoft Office 2007 (с SP3 и со всеми обновлениями) или более новой версии.</p>
+<p>Для работы с формулами внутри docx-файла необходим MathType версии 6.9 и выше.</p>
+<div id="software-r" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> R, RStudio, TeXLive<a href="chapter1.html#software-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="software-r-windows" class="section level4 hasAnchor" number="1.3.1.1">
+<h4><span class="header-section-number">1.3.1.1</span> Установка под Windows<a href="chapter1.html#software-r-windows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Поддерживается 64-битная версия Windows 7 и выше. Процесс установки сводится к следующим шагам:</p>
+<ol style="list-style-type: decimal">
+<li><p>Загрузить R 4.0.5 for Windows с <a href="https://cran.r-project.org/bin/windows/base/old/4.0.5/R-4.0.5-win.exe">официального сайта</a> и установить со всеми настройками по умолчанию.</p></li>
+<li><p>Загрузить R for Windows Build Tools с <a href="https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe">официального сайта</a> и установить со всеми настройками по умолчанию.</p></li>
+<li><p>Загрузить редактор Notepad++ с <a href="https://notepad-plus-plus.org/download/">официального сайта</a> и установить со всеми настройками по умолчанию.</p></li>
+<li><p>Для сборки демонстрационного примера потребуется загрузить Git for Windows с <a href="https://git-scm.com/download/win">официального сайта</a> и установить, выбрав на этапе <em>Choosing the default editor used by Git</em> пункт <em>Use Notepad++ as Git’s default editor</em>.</p></li>
+<li><p>Для удобства работы с Git-репозиториями рекомендуется дополнительно загрузить с <a href="https://tortoisegit.org/download/">официального сайта</a> и установить расширение TortoiseGit для Проводника.</p></li>
+<li><p>Загрузить RStudio с <a href="https://www.rstudio.com/products/rstudio/download/#download">официального сайта</a> и запустить установку файла <code>RStudio-....exe</code> и дождаться ее завершения.</p></li>
+<li><p>Для сборки PDF-версии документа с помощью RStudio потребуется установить TeX-пакеты от проекта TeXLive.</p>
+<blockquote>
+<p><strong>Примечание:</strong> в сети попадаются инструкции по использованию под Windows дистрибутива <a href="https://miktex.org/howto/install-miktex">MikTeX</a>, но он не работает нормально совместно с RStudio.<br />
+В дистрибутивах GNU/Linux применяется TeXLive, поэтому будем использовать именно его и под Windows.</p>
+</blockquote>
+<p>Установка TeXLive требует следующих действий:</p>
+<ol style="list-style-type: decimal">
+<li>Загрузить дистрибутив TeXLive в виде ISO-файла <a href="https://www.tug.org/texlive/acquire-iso.html#torrent">как торрент с официального сайта</a>.</li>
+<li>Подключить загруженный образ установочного диска в систему программой <a href="https://www.osforensics.com/tools/mount-disk-images.html">OSFMount</a> или аналогичной.</li>
+<li>Запустить установщик <code>install-tl-windows.bat</code>.</li>
+<li>В открывшемся окне нажать кнопку <em>Установить</em>.</li>
+<li>По окончанию установки нажать кнопку <em>Закрыть</em>.</li>
+</ol></li>
+<li><p>Запустить RStudio и установить пакеты R для поддержки <a href="https://bookdown.org/home/getting-started.html">bookdown</a> через командную строку внутри RStudio, выполнив последовательно команду в окне <em>Console</em>:</p>
+<pre><code>install.packages(c(&#39;markdown&#39;, &#39;bookdown&#39;, &#39;tikzDevice&#39;), repos=&#39;http://cran.r-project.org&#39;)</code></pre>
+<p>и закрыть RStudio.</p></li>
+<li><p>Для подготовки первого RMarkdown документа следует клонировать <a href="https://github.com/k0ly4n/bookdown-demo-rus">демонстрационный русифицированный репозиторий</a> с помощью Git - открыть Проводник, нажать правую кнопку мыши, выбрать в выпадающем меню пункт <em>Git Bash Here</em>, вставить в командную строку команду</p>
+<pre><code>git clone https://github.com/k0ly4n/bookdown-demo-rus</code></pre>
+<p>нажать <code>&lt;Enter&gt;</code> и дождаться завершения клонирования, закрыть окно <em>MINGW…</em>.</p></li>
+<li><p>Перейти в только что созданный каталог <code>bookdown-demo-rus</code> и выполнить двойной щелчок мышью по файлу <code>bookdown-demo-rus.Rproj</code> для открытия проекта книги в RStudio.</p></li>
+<li><p>Дождаться открытия RStudio, выбрать в верхней правой части окна вкладку <em>Build</em> и нажать стрелку вниз рядом с пунктом <em>Build Book</em> и выбрать пункт <em>bookdown:html_document2</em> для подготовки HTML-версии книги.</p>
+<blockquote>
+<p><strong>Примечание:</strong> возможно появление окна <em>Install Required Packages</em>,
+в котором нужно нажать кнопку <em>Yes</em> для установки пакетов.</p>
+</blockquote>
+<p>По завершению сборки откроется HTML-версия книги.</p>
+<blockquote>
+<p><strong>Примечание:</strong> если требуется подготовка книги в EPUB-формате (<em>bookdown:epub_book</em>), то для просмотра этого формата
+нужно установить дополнительный просмотрщик. Например, простой и легковесный <a href="https://www.sumatrapdfreader.org/dl/rel/3.4.6/SumatraPDF-3.4.6-64-install.exe">Sumatra PDF</a>.</p>
+</blockquote></li>
+<li><p>Для сборки PDF-версии документа следует выбрать в верхней правой части окна RStudio вкладку <em>Build</em> и нажать стрелку вниз рядом с пунктом <em>Build Book</em> и выбрать пункт <em>bookdown:pdf_book</em>.</p></li>
+</ol>
+</div>
+<div id="software-r-linux" class="section level4 hasAnchor" number="1.3.1.2">
+<h4><span class="header-section-number">1.3.1.2</span> Установка под GNU/Linux<a href="chapter1.html#software-r-linux" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>В настоящее время существует два скрипта автоматизированной установки необходимого программного обеспечения:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://github.com/N0rbert/umpis">umpis</a> предназначен для систем на основе дистрибутива Debian, он поддерживает системы Debian (9, 10, 11 и 12), AstraLinux (2.12 и 1.7), Ubuntu MATE (18.04 LTS, 20.04 LTS и 22.04 LTS).</li>
+<li><a href="https://github.com/N0rbert/alpis">alpis</a> - для систем ALT Linux, созданных на основе 9-й и 10-й платформ (Workstation, MATE StarterKit и SimplyLinux).</li>
+</ol>
+<p>Многолетний опыт автора настоящего документа позволяет рекомендовать среду рабочего стола MATE для повседневного и повсеместного использования. В следующем подразделе приведены в том числе команды для установки среды MATE в систему Debian.</p>
+<div id="software-r-linux-debian" class="section level5 hasAnchor" number="1.3.1.2.1">
+<h5><span class="header-section-number">1.3.1.2.1</span> Установка под Debian<a href="chapter1.html#software-r-linux-debian" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>В системах Debian рекомендуется предварительно настроить использование команды <code>sudo</code> с помощью выполнения следующих команд, запущенных от имени пользователя <em>root</em>:</p>
+<pre><code>apt-get update
+apt-get install sudo</code></pre>
+<p>и затем добавить пользователя в группу <em>sudo</em> командой <code>su -l -c "usermod -a -G sudo $USER"</code>, выполненной от обычного пользователя, и перезагрузить компьютер.</p>
+<p>После этого среда MATE может быть установлена с помощью команды <code>sudo apt-get install task-mate-desktop mate-desktop-environment-extras</code>.</p>
+<p>Для запуска скрипта <code>umpis.sh</code> в графической сессии MATE следует выполнить следующие команды в терминале:</p>
+<pre><code>sudo apt-get update
+sudo apt-get install wget dconf-cli
+
+cd ~/Downloads || cd ~/Загрузки
+wget -c https://raw.githubusercontent.com/N0rbert/umpis/master/umpis.sh
+chmod +x umpis.sh
+sudo -E ./umpis.sh</code></pre>
+<p>Большую часть времени скрипт работает автономно без участия пользователя. На финальном этапе скрипт задаст вопрос о выборе экрана входа в систему, на который нужно ответить выбором пункта <em>sddm</em>; запросит у пользователя его пароль для установки среды программирования Arduino IDE и путь к каталогу ее установки. После окончания работы скрипта нужно перезагрузить компьютер, на экране входа выбрать сеанс MATE и авторизоваться.</p>
+</div>
+<div id="software-r-linux-alt" class="section level5 hasAnchor" number="1.3.1.2.2">
+<h5><span class="header-section-number">1.3.1.2.2</span> Установка под ALT Linux<a href="chapter1.html#software-r-linux-alt" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>В системах ALT Linux Workstation и MATE StarterKit рекомендуется предварительно настроить использование команды <code>sudo</code> с помощью выполнения следующей команды, запущенной от обычного пользователя:</p>
+<pre><code>su -l -c &quot;usermod -a -G wheel $USER; control sudo wheelonly; control sudoers relaxed; control sudoreplay wheelonly; control sudowheel enabled;&quot;</code></pre>
+<p>Для запуска скрипта <code>alpis.sh</code> в графической сессии MATE следует выполнить следующие команды в терминале:</p>
+<pre><code>sudo apt-get update
+sudo apt-get install wget lsb-release
+
+cd ~/Downloads || cd ~/Загрузки
+wget -c https://raw.githubusercontent.com/N0rbert/alpis/master/alpis.sh
+chmod +x alpis.sh
+sudo -E ./alpis.sh</code></pre>
+<p>Скрипт работает автономно. После окончания его работы нужно перезагрузить компьютер, на экране входа выбрать сеанс MATE и авторизоваться.</p>
+</div>
+</div>
+</div>
+<div id="software-retext" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Текстовый редактор ReText<a href="chapter1.html#software-retext" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Редактирование отдельных Markdown файлов можно выполнять в простом визуальном редакторе <a href="https://github.com/retext-project/retext">ReText</a>. В зависимости от версии Windows его установка выполняется следующим образом:</p>
+<ul>
+<li>в Windows 7 нужно установить <a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe">Python 3.8.10</a> (поставив галочку <em>Add Python 3.8 to PATH</em>) и затем установить ReText из репозитория PyPi с помощью команды <code>pip install ReText==7.2.3 pyqtwebengine==5.15.2</code>.</li>
+<li>в более новых версиях Windows нужно установить <a href="https://www.python.org/downloads/windows/">актуальную версию Python</a> и затем установить ReText из репозитория PyPi с помощью команды <code>pip install ReText pyqt6-webengine</code>.</li>
+</ul>
+<p>После установки редактор ReText можно запустить командой <code>retext</code> и создать затем ярлык для программы.</p>
+<blockquote>
+<p><strong>Примечание:</strong> в случае если при открытии документа с русским текстом символы в редакторе отображаются некорректно, следует изменить шрифты на поддерживающие кириллицу.
+Для этого следует нажать в меню <strong>Edit</strong> на пункт <strong>Change editor font</strong> для смены шрифта в редакторе и выбрать нужный шрифт (обычно моноширинный, например <em>Courier New</em>).<br />
+Далее следует повторить действия для шрифта предварительного просмотра <strong>Change preview font</strong> и выбрать нужный шрифт (обычно не моноширинный, например <em>Times New Roman</em>).</p>
+</blockquote>
+<p>В системах GNU/Linux редактор содержится в репозиториях под именем пакета <code>retext</code>. Для поддержки проверки орфографии нужно установить специальный пакет командой <code>sudo apt-get install python3-enchant</code> (Debian) или <code>sudo apt-get install python3-module-enchant</code> (ALT Linux).</p>
+<p>Следует учитывать, что редактор ReText не поддерживает расширения RMarkdown. Однако, это не мешает их использованию и набору в тексте.</p>
+<p>Для поддержки формул внутри текста (вида <code>$...$</code>) нужно включить в настройках расширение <code>mathjax</code> (в линуксе с помощью команды <code>echo mathjax &gt; $HOME/.config/markdown-extensions.txt</code>) и переключить режим предварительного просмотра на использование движка <em>WebEngine (Chromium) Renderer</em> (или <em>WebKit Renderer</em>) в меню <em>Edit</em>.</p>
+<p>Для игнорирования YAML заголовка нужно добавить в строку дополнений <code>meta</code>.</p>
+</div>
+</div>
+<div id="authoring-odt" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Процесс подготовки odt-документов<a href="chapter1.html#authoring-odt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Для odt-документов требуются дополнительные действия.</p>
+<div id="authoring-odt-template" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Использование odt-шаблона<a href="chapter1.html#authoring-odt-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Для удовлетворения требований оформления под конкретный случай возможно создание и использование файла odt-шаблона. В этом файле задается формат страницы, поля страницы, стили заголовков и текста. Путь в файлу odt-шаблона задается в YAML-преамбуле:</p>
+<pre><code>---
+output:
+  bookdown::odt_document2:
+    reference_docx: styles-reference.odt
+---</code></pre>
+<p>Файл шаблона может быть многократно последовательно изменен до получения качественного результата.</p>
+<p>Особенности:</p>
+<ol style="list-style-type: decimal">
+<li>На текущий момент не поддерживаются пользьзовательские стили оформления участков текста.</li>
+<li>Формулы будут отображаться в формате OMML, их преобразование в MathType под GNU/Linux невозможно.</li>
+</ol>
+</div>
+<div id="authoring-odt-final" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Финальная подготовка рукописи<a href="chapter1.html#authoring-odt-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Финальная подготовка текста включает следующие этапы:</p>
+<ul>
+<li><p>оформление <strong>страниц</strong> и их порядок следования:</p>
+<ol style="list-style-type: decimal">
+<li>Редактирование титульного листа в соответствии с требованиями.</li>
+<li>Перенос страницы задания и/или аннотации на второй лист (после титульного листа) перед оглавлением.</li>
+<li>Удаление нумерации перед следующими структурными элементами: <em>Аннотация</em>, <em>Введение</em>, <em>Заключение</em>, <em>Приложения</em>, <em>Список использованных источников</em> (нужно нажать мышью на номер и выполнить удаление кнопкой <code>&lt;Delete&gt;</code>).</li>
+<li>Ручной перенос приложений в конец документа (после списка использованных источников).</li>
+<li>Ручное добавление заголовков “Продолжение Приложения #” в случае если приложения состоят двух и более страниц.</li>
+</ol></li>
+<li><p>оформление <strong>таблиц</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Перенос названий и номеров таблиц снизу таблицы наверх.</li>
+<li>Ручное добавление текста “Продолжение табл. #” в случае если таблица не помещается на одну страницу.</li>
+</ol></li>
+<li><p>оформление <strong>формул</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Выравнивание формулы и ее номера вручную с помощью соответствующего стиля.</li>
+</ol></li>
+<li><p>действия <strong>перед печатью</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Проверка правописания с корректировкой ошибок.</li>
+<li>Обновление всех ссылок документа с помощью последовательного нажатия комбинаций клавиш <code>&lt;Ctrl+A&gt;</code>, <code>&lt;F9&gt;</code> или из меню <em>Tools → Update → Update All</em>.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="authoring-docx" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Процесс подготовки docx-документов<a href="chapter1.html#authoring-docx" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Аналогично формату odt, для docx-документов требуются дополнительные действия.</p>
+<div id="authoring-docx-template" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Использование docx-шаблона<a href="chapter1.html#authoring-docx-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Для удовлетворения требований оформления под конкретный случай возможно создание и использование файла docx-шаблона. В этом файле задается формат страницы, поля страницы, стили заголовков и текста. Путь в файлу docx-шаблона задается в YAML-преамбуле:</p>
+<pre><code>---
+output:
+  bookdown::word_document2:
+    reference_docx: styles-reference.docx
+---</code></pre>
+<p>Файл шаблона может быть многократно последовательно изменен до получения качественного результата.</p>
+</div>
+<div id="authoring-docx-math" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Преобразование формул<a href="chapter1.html#authoring-docx-math" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RStudio использует Pandoc для преобразования документов из Markdown в другие форматы. Поэтому формулы оказываются преобразованными в формат OMML (Microsoft’s Office Math Markup Language) вместо MathType. Но для издательства МЭИ и при оформлении дипломов и отчетов достаточно строго требуется использование MathType, поэтому необходимо выполнить конвертацию формул из OMML в MathType:</p>
+<ol style="list-style-type: decimal">
+<li>Открыть docx-документ в Word (иногда <em>Открыть и восстановить</em>);</li>
+<li>На ленте <em>MathType</em> нажать кнопку <em>Convert Equations</em>;
+в открывшемся окне установить в области <em>Equation types to convert</em> галочку <em>Word 2007 and late (OMML) equations</em>, затем в области <em>Convert equations to</em> выбрать <em>MathType equations (OLE objects)</em>.</li>
+<li>Нажать кнопку <em>Convert</em> и ждать результата.</li>
+<li>Отформатировать все формулы (греческие буквы - прямо и т.п.) - нажать на ленте <em>MathType</em> кнопку <em>Format Equations</em>, в области <em>Format equations using preferences from</em> установить переключатель в положение <em>MathType preference file</em>, нажать кнопку <em>Browse</em>, выбрать файл настроек <code>format.eqp</code> и применить изменения кнопкой <em>OK</em>.</li>
+</ol>
+<p><strong>Примечание:</strong> При конвертации из OMML в MathType могут не работать LaTeX-окружения <code>split</code> и <code>multiline</code>, поэтому надежнее использовать <code>array</code>.</p>
+</div>
+<div id="authoring-docx-final" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Финальная подготовка рукописи<a href="chapter1.html#authoring-docx-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Финальная подготовка текста включает следующие этапы:</p>
+<ul>
+<li><p>оформление <strong>страниц</strong> и их порядок следования:</p>
+<ol style="list-style-type: decimal">
+<li>Выделение первой страницы под титульный лист и ее добавление в начало документа.</li>
+<li>Перенос страницы задания и/или аннотации на второй лист (после титульного листа) перед оглавлением.</li>
+<li>Удаление нумерации перед следующими структурными элементами: <em>Аннотация</em>, <em>Введение</em>, <em>Заключение</em>, <em>Приложения</em>, <em>Список использованных источников</em> (нужно нажать мышью на номер и выполнить удаление кнопкой <code>&lt;Delete&gt;</code>).</li>
+<li>Ручной перенос приложений в конец документа (после списка использованных источников).</li>
+<li>Ручное добавление заголовков “Продолжение Приложения #” в случае если приложения состоят двух и более страниц.</li>
+</ol></li>
+<li><p>оформление <strong>таблиц</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Ручное добавление текста “Продолжение табл. #” в случае если таблица не помещается на одну страницу.</li>
+</ol></li>
+<li><p>оформление <strong>формул</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Преобразование всех формул из OMML в MathType (см. раздел <a href="chapter1.html#authoring-docx-math">1.5.2</a> выше).</li>
+</ol></li>
+<li><p>действия <strong>перед печатью</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Проверка правописания с корректировкой ошибок.</li>
+<li>Обновление всех ссылок документа с помощью последовательного нажатия комбинаций клавиш <code>&lt;Ctrl+A&gt;</code>, <code>&lt;F9&gt;</code> и выбора пункта <em>Обновить целиком</em> в диалоговом окне.</li>
+<li>Проверка отсутствия неработоспособных ссылок с помощью поиска (<code>&lt;Ctrl+F&gt;</code>, текст <em>Ошибка!</em>).</li>
+</ol></li>
+</ul>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-arduino" class="csl-entry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Arduino – Home [Электронный ресурс]. URL: <a href="https://www.arduino.cc/">https://www.arduino.cc/</a>.</div>
+</div>
+<div id="ref-banzi" class="csl-entry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Массимо Банци. Arduino для начинающих волшебников. М.: Рид Групп, 2012.</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Текст сноски<a href="chapter1.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-chapter.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo-rus.pdf", "bookdown-demo-rus.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

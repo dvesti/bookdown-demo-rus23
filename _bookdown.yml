@@ -1,0 +1,10 @@
+book_filename: "bookdown-demo-rus"
+language:
+  label:
+    fig: 'Рисунок '
+    tab: 'Таблица '
+    exm: 'Листинг '
+
+delete_merged_file: yes
+
+output_dir: "docs"

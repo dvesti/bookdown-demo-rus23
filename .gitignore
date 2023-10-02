@@ -1,0 +1,15 @@
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+_book
+_bookdown_files
+rsconnect
+packages.bib
+bookdown-demo-rus-tikzDictionary
+bookdown-demo-rus.html
+bookdown-demo-rus.log
+bookdown-demo-rus.Rmd
+bookdown-demo-rus.knit.md
+bookdown-demo-rus.utf8.md
+
