@@ -24,7 +24,7 @@ output:
           <li><a href="https://dvesti.github.io/bookdown-demo-rus23/">Пример книги на русском</a></li>
         after: |
           <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-      edit: https://github.com/dvesti/bookdown-demo-rus23/tree/main/edit/master/%s
+      edit: https://github.com/dvesti/bookdown-demo-rus23/edit/main/%s
       download: ["pdf", "epub"]
   bookdown::html_document2:
     toc: true
